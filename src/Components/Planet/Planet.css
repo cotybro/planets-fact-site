@@ -1,0 +1,135 @@
+.planet__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: 'League Spartan', sans-serif;
+  max-width: 1110px;
+  margin: 0 auto;
+  margin-top: 8vh;
+}
+
+.planet__img {
+  height: 290px;
+  width: 290px;
+  align-self: center;
+  position: relative;
+}
+
+.planet__geo__img {
+  position: absolute;
+  height: 199px;
+  width: 163px;
+  bottom: 190px;
+}
+
+.planet__container__top {
+  display: flex;
+  width: 100vw;
+  max-width: 1100px;
+  justify-content: space-around;
+  margin-bottom: 5.4375rem;
+}
+
+.planet__img__container {
+  display: flex;
+  justify-content: center;
+}
+
+.planet__name {
+  font-family: 'Antonio', sans-serif;
+  font-size: 5rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+
+.planet__info {
+  max-width: 350px;
+}
+
+.planet__info__text {
+  font-size: 0.875rem;
+  line-height: 25px;
+  margin-bottom: 1.5rem;
+}
+
+.source__link {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2.5rem;
+  color: hsla(0, 0%, 100%, 0.5);
+}
+
+.source__link a {
+  margin-right: 0.5rem;
+  color: hsla(0, 0%, 100%, 0.5);
+  font-weight: 700;
+}
+
+.overview__container {
+  max-width: 350px;
+}
+
+.overview__item {
+  border: 1px solid hsla(0, 0%, 100%, 0.2);
+  padding: 0.75rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.overview__item:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+.overview__item:hover {
+  cursor: pointer;
+}
+
+.overview__title {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 2.571px;
+  text-transform: uppercase;
+  color: hsla(0, 0%, 100%, 0.5);
+}
+
+.overview__title span {
+  color: hsla(0, 0%, 100%, 1);
+}
+
+.active {
+  background-color: #419ebb;
+}
+
+.planet__container__bottom {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  max-width: 1110px;
+}
+
+.planet__stats {
+  padding: 1.25rem;
+  border: 1px solid hsla(0, 0%, 100%, 0.2);
+  width: 100%;
+}
+
+.planet__stats:not(:last-child) {
+  margin-right: 1.875rem;
+}
+
+.stat__title {
+  color: hsla(0, 0%, 100%, 0.5);
+  font-size: 0.6875rem;
+  font-weight: 700;
+  line-height: 25px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+.stat__number {
+  font-size: 2.5rem;
+  letter-spacing: -1.5px;
+  text-transform: uppercase;
+}

@@ -1,6 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Antonio:wght@500;700&family=League+Spartan:wght@400;700&display=swap');
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-
+  font-family: 'Antonio', sans-serif;
+  font-family: 'League Spartan', sans-serif;
+  font-size: 16px;
   color: rgba(255, 255, 255, 0.87);
   background-color: #242424;
+  background-image: url(../src/assets/Images/background-stars.svg);
+  background-position: center;
+  background-size: cover;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }

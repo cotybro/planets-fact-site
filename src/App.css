@@ -1,4 +1,19 @@
 #root {
-  max-width: 1440px;
   margin: 0 auto;
+}
+
+.planet-facts {
+  height: 100vh;
+}
+
+.planet-facts::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  background-color: #070724;
+  opacity: 0.6;
 }
