@@ -4,13 +4,13 @@ import planetInfo from '../data.json'
 import Planet from '../Components/Planet/Planet'
 
 // Images
-import mercury from '../assets/Images/planet-mercury.svg'
-import mercuryInternal from '../assets/Images/planet-mercury-internal.svg'
+import planet from '../assets/Images/planet-mercury.svg'
+import planetInternal from '../assets/Images/planet-mercury-internal.svg'
 import mercuryGeo from '../assets/Images/geology-mercury.png'
 import source from '../assets/Images/icon-source.svg'
 
 function Mercury() {
-  const [planetImg, setPlanetImg] = useState(mercury)
+  const [planetImg, setPlanetImg] = useState(planet)
   const [planetGeo, setPlanetGeo] = useState(false)
   const [planetContent, setPlanetContent] = useState(
     planetInfo[0].overview.content
@@ -21,7 +21,7 @@ function Mercury() {
   const [planetOverview, setPlanetOverview] = useState(1)
 
   function handleOverviewClick() {
-    setPlanetImg(mercury)
+    setPlanetImg(planet)
     setPlanetContent(planetInfo[0].overview.content)
     setPlanetSource(planetInfo[0].overview.source)
     setPlanetGeo(false)
@@ -29,7 +29,7 @@ function Mercury() {
   }
 
   function handleInternalStructureClick() {
-    setPlanetImg(mercuryInternal)
+    setPlanetImg(planetInternal)
     setPlanetContent(planetInfo[0].structure.content)
     setPlanetSource(planetInfo[0].structure.source)
     setPlanetGeo(false)
@@ -37,7 +37,7 @@ function Mercury() {
   }
 
   function handleSurfaceGeologyClick() {
-    setPlanetImg(mercury)
+    setPlanetImg(planet)
     setPlanetContent(planetInfo[0].geology.content)
     setPlanetSource(planetInfo[0].geology.source)
     setPlanetGeo(true)
@@ -48,7 +48,11 @@ function Mercury() {
     <Planet>
       <div className='planet__container__top'>
         <div className='planet__img__container'>
-          <img src={planetImg} alt='' className='planet__img' />
+          <img
+            src={planetImg}
+            alt={planetInfo[0].name}
+            className='planet__img'
+          />
           {planetGeo === true ? (
             <img
               src={mercuryGeo}
@@ -70,7 +74,7 @@ function Mercury() {
           <div className='overview__container'>
             <div
               className={`overview__item ${
-                planetOverview === 1 ? 'active' : ''
+                planetOverview === 1 ? 'mercury__active' : ''
               }`}
               onClick={handleOverviewClick}
             >
@@ -80,7 +84,7 @@ function Mercury() {
             </div>
             <div
               className={`overview__item ${
-                planetOverview === 2 ? 'active' : ''
+                planetOverview === 2 ? 'mercury__active' : ''
               }`}
               onClick={handleInternalStructureClick}
             >
@@ -90,7 +94,7 @@ function Mercury() {
             </div>
             <div
               className={`overview__item ${
-                planetOverview === 3 ? 'active' : ''
+                planetOverview === 3 ? 'mercury__active' : ''
               }`}
               onClick={handleSurfaceGeologyClick}
             >

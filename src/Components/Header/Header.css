@@ -39,4 +39,9 @@
   color: #fff;
   opacity: 0.7;
   text-transform: uppercase;
+  transition: all 0.3s ease-in-out;
+}
+
+.planet__link:hover {
+  opacity: 1;
 }

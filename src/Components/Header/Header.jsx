@@ -13,28 +13,28 @@ function Header() {
         <div className='header__right'>
           <ul>
             <Link to='/'>
-              <li className='planet__link'>Mercury</li>
+              <li className='planet__link mercury__link'>Mercury</li>
             </Link>
             <Link to='/venus'>
-              <li className='planet__link'>Venus</li>
+              <li className='planet__link venus__link'>Venus</li>
             </Link>
             <Link to='/earth'>
-              <li className='planet__link'>Earth</li>
+              <li className='planet__link earth__link'>Earth</li>
             </Link>
             <Link to='/mars'>
-              <li className='planet__link'>Mars</li>
+              <li className='planet__link mars__link'>Mars</li>
             </Link>
             <Link to='/jupiter'>
-              <li className='planet__link'>Jupiter</li>
+              <li className='planet__link jupiter__link'>Jupiter</li>
             </Link>
             <Link to='/saturn'>
-              <li className='planet__link'>Saturn</li>
+              <li className='planet__link saturn__link'>Saturn</li>
             </Link>
             <Link to='/uranus'>
-              <li className='planet__link'>Uranus</li>
+              <li className='planet__link uranus__link'>Uranus</li>
             </Link>
             <Link to='/neptune'>
-              <li className='planet__link'>Neptune</li>
+              <li className='planet__link neptune__link'>Neptune</li>
             </Link>
           </ul>
         </div>
