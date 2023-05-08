@@ -5,6 +5,9 @@
 .planet-facts {
   min-height: 100vh;
   position: relative;
+  background-image: url(../src/assets/Images/background-stars.svg);
+  background-position: center;
+  background-size: cover;
 }
 
 .planet-facts::before {
@@ -16,9 +19,9 @@
   height: 100%;
   z-index: -1;
   background-color: #070724;
-  opacity: 0.6;
 }
 
 .main {
-  padding-bottom: 2rem;
+  padding-bottom: 1rem;
+  position: relative;
 }

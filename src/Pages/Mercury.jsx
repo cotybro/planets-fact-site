@@ -20,6 +20,8 @@ function Mercury() {
   )
   const [planetOverview, setPlanetOverview] = useState(1)
 
+  const [mobileOverview, setMobileOverview] = useState('overview')
+
   function handleOverviewClick() {
     setPlanetImg(planet)
     setPlanetContent(planetInfo[0].overview.content)
@@ -47,7 +49,42 @@ function Mercury() {
   return (
     <Planet>
       <div className='planet__container__top'>
-        <div className='planet__img__container'>
+        <div className='planet__mobile__overview'>
+          <div
+            className={`${
+              mobileOverview === 'overview' ? 'mercury__overview__active' : ''
+            } mobile__overview__item`}
+            onClick={() => {
+              setMobileOverview('overview')
+              handleOverviewClick()
+            }}
+          >
+            <p className='mobile__overview__title'>overview</p>
+          </div>
+          <div
+            className={`${
+              mobileOverview === 'structure' ? 'mercury__overview__active' : ''
+            } mobile__overview__item`}
+            onClick={() => {
+              setMobileOverview('structure')
+              handleInternalStructureClick()
+            }}
+          >
+            <p className='mobile__overview__title'>structure</p>
+          </div>
+          <div
+            className={`${
+              mobileOverview === 'surface' ? 'mercury__overview__active' : ''
+            } mobile__overview__item`}
+            onClick={() => {
+              handleSurfaceGeologyClick()
+              setMobileOverview('surface')
+            }}
+          >
+            <p className='mobile__overview__title'>surface</p>
+          </div>
+        </div>
+        <div className='planet__img__container planet__mb'>
           <img
             src={planetImg}
             alt={planetInfo[0].name}
@@ -62,15 +99,17 @@ function Mercury() {
           ) : null}
         </div>
         <div className='planet__info'>
-          <p className='planet__name'>{planetInfo[0].name}</p>
-          <p className='planet__info__text'>{planetContent}</p>
-          <p className='source__link'>
-            Source : &nbsp;
-            <a href={planetSource} target='_blank'>
-              Wikipedia
-            </a>
-            <img src={source} alt='Source' className='source__img' />
-          </p>
+          <div className='planet__info__header'>
+            <p className='planet__name'>{planetInfo[0].name}</p>
+            <p className='planet__info__text'>{planetContent}</p>
+            <p className='source__link'>
+              Source : &nbsp;
+              <a href={planetSource} target='_blank'>
+                Wikipedia
+              </a>
+              <img src={source} alt='Source' className='source__img' />
+            </p>
+          </div>
           <div className='overview__container'>
             <div
               className={`overview__item ${

@@ -1,9 +1,10 @@
-import React from 'react'
-import { Routes, Route } from 'react-router-dom'
+import React, { useState } from 'react'
+import { Routes, Route, Link } from 'react-router-dom'
 import './App.css'
 
 //Components
 import Header from './Components/Header/Header'
+import BurgerMenu from './Components/BurgerMenu/BurgerMenu'
 
 //Pages
 import Earth from './Pages/Earth'
@@ -16,9 +17,11 @@ import Uranus from './Pages/Uranus'
 import Venus from './Pages/Venus'
 
 function App() {
+  const [active, setActive] = useState(false)
+
   return (
     <div className='planet-facts'>
-      <Header />
+      <Header active={active} setActive={setActive} />
       <div className='main'>
         <Routes>
           <Route path='/' element={<Mercury />} />
@@ -30,6 +33,7 @@ function App() {
           <Route path='/uranus' element={<Uranus />} />
           <Route path='/neptune' element={<Neptune />} />
         </Routes>
+        {active && <BurgerMenu active={active} setActive={setActive} />}
       </div>
     </div>
   )

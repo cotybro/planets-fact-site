@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import './Header.css'
-function Header() {
+function Header({ active, setActive }) {
   return (
     <div className='header'>
       <div className='header__container'>
@@ -11,6 +11,10 @@ function Header() {
           </Link>
         </div>
         <div className='header__right'>
+          <button
+            className={`header__burger ${active ? 'active' : ''}`}
+            onClick={() => setActive(!active)}
+          ></button>
           <ul>
             <Link to='/'>
               <li className='planet__link mercury__link'>Mercury</li>
