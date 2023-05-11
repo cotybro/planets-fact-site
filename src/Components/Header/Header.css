@@ -10,10 +10,14 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  padding: 1.375rem 2.5rem 1.6875rem 2rem;
+  padding: 0 2rem;
   background-color: transparent;
   max-width: 1440px;
   margin: 0 auto;
+}
+
+.header__left {
+  align-self: center;
 }
 
 .header a {
@@ -44,8 +48,9 @@
   opacity: 0.7;
   text-transform: uppercase;
   transition: all 0.3s ease-in-out;
-  border-bottom: 2px solid transparent;
-  padding-bottom: 3px;
+  border-top: 5px solid transparent;
+  /* padding-bottom: 3px; */
+  padding: 1.5rem 0;
 }
 
 .planet__link:hover {
@@ -54,42 +59,42 @@
 
 .mercury__link:hover {
   color: #419ebb;
-  border-bottom-color: #419ebb;
+  border-top-color: #419ebb;
 }
 
 .venus__link:hover {
   color: #eda249;
-  border-bottom-color: #eda249;
+  border-top-color: #eda249;
 }
 
 .earth__link:hover {
   color: #6f2ed6;
-  border-bottom-color: #6f2ed6;
+  border-top-color: #6f2ed6;
 }
 
 .mars__link:hover {
   color: #d14c32;
-  border-bottom-color: #d14c32;
+  border-top-color: #d14c32;
 }
 
 .jupiter__link:hover {
   color: #d83a34;
-  border-bottom-color: #d83a34;
+  border-top-color: #d83a34;
 }
 
 .saturn__link:hover {
   color: #cd5120;
-  border-bottom-color: #cd5120;
+  border-top-color: #cd5120;
 }
 
 .uranus__link:hover {
   color: #1ec1a2;
-  border-bottom-color: #1ec1a2;
+  border-top-color: #1ec1a2;
 }
 
 .neptune__link:hover {
   color: #2d68f0;
-  border-bottom-color: #2d68f0;
+  border-top-color: #2d68f0;
 }
 
 .header__burger {
