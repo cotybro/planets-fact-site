@@ -23,6 +23,8 @@ Users should be able to:
 
 ### Screenshot
 
+![Planet Facts](https://github.com/cotybro/planets-fact-site/assets/36529826/b7b1f7fe-70a5-4642-b3a6-ac617d794297)
+
 ### Links
 
 - Solution URL: [Solution URL](https://github.com/cotybro/planets-fact-site)
